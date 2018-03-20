@@ -3,9 +3,9 @@
 
 BCDEDIT Examples:
 
-`bcdedit /set {default} safeboot minimal`
+    bcdedit /set {default} safeboot minimal
+    bcdedit /set {default} safebootalternateshell yes
 
-`bcdedit /set {default} safebootalternateshell yes`
 
 `bcdedit /set {default} recoveryenabled no`
 
