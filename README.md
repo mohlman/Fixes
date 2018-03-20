@@ -17,6 +17,8 @@ DISM Examples:
 
 `dism /image:C:\ /get-packages`
 
+`dism /online /cleanup-image /scanhealth`
+
 SFC Examples:
 
 `sfc /verifyonly`
