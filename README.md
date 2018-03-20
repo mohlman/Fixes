@@ -37,4 +37,21 @@ Read SFC Results:
 `findstr /c:"[SR] Ca" %windir%\logs\cbs\cbs.log > c:\sfc.txt`
 
 The Run box is your friend:
+    
     inetcpl.cpl
+
+Help! The Recovery partition is visible!
+
+    diskpart
+    list vol
+    select volume <number>
+    remove letter=<letter>
+    exit
+    
+The recovery partition seems to pretty regularly be volume 2 and assigned letter D. So the following often works:
+
+    diskpart
+    list vol
+    sel vol 2
+    remove letter=d
+    exit
