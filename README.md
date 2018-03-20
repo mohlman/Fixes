@@ -1,3 +1,7 @@
+The majority of this document is knowledge from my head. Any corrections or attributions are welcome. 
+
+
+
 # Fixes
 
 
@@ -25,6 +29,12 @@ DISM Examples:
 SFC Examples:
 
 `sfc /verifyonly`
+
+`sfc /scanhealth /offbootdir=c: /offwindir=c:\windows`
+
+Read SFC Results:
+
+`findstr /c:"[SR] Ca" %windir%\logs\cbs\cbs.log > c:\sfc.txt`
 
 The Run box is your friend:
     inetcpl.cpl
