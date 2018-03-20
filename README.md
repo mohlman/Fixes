@@ -26,3 +26,5 @@ SFC Examples:
 
 `sfc /verifyonly`
 
+The Run box is your friend:
+    inetcpl.cpl
