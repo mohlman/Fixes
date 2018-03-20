@@ -55,3 +55,11 @@ The recovery partition seems to pretty regularly be volume 2 and assigned letter
     sel vol 2
     remove letter=d
     exit
+
+
+Windows Network Troubleshooting:
+
+Google DNS:
+
+    8.8.8.8
+    8.8.4.4
