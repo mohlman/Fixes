@@ -9,8 +9,11 @@ BCDEDIT Examples:
 
 `bcdedit /set {default} recoveryenabled no`
 
+
+Enable the handy "F8 for boot options" mode
 `bcdedit /set {default} bootmenupolicy legacy`
 
+Get back to normal mode (from safe mode):
 `bcdedit /deletevalue {default} safeboot`
 
 DISM Examples:
