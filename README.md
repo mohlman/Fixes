@@ -7,12 +7,15 @@ The majority of this document is knowledge from my head. Any corrections or attr
 ## Computer not booting:
 
 EUFI System:
+
     bcdboot c:\windows
     
 BIOS System:
+
     bootrec /fixmbr
     bootrec /fixboot
     bootrec /rebuildbcd
+
 Note: If `bootrec /rebuildbcd` says that no operating systems are found, it means no new, unlisted OS is present, i.e. Windows is already in the BCD, and the command was successful.
 
 
