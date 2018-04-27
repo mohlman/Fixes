@@ -78,3 +78,8 @@ Google DNS:
 
     8.8.8.8
     8.8.4.4
+
+Alternative DNS Providers:
+
+https://www.lifewire.com/free-and-public-dns-servers-2626062
+
