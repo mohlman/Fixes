@@ -41,18 +41,22 @@ Instead of merging EVERYTHING, a better approach would be to copy the previous a
 # Examples
 BCDEDIT Examples:
 
+
     bcdedit /set {default} safeboot minimal
     bcdedit /set {default} safebootalternateshell yes
 
+The following disables automatic repair, which can be helpful. On more than one occasion a syskey password has reinstalled itself due to the repair operations performed by automatic repair. There are also situations where PC will BSOD and describe the driver/AV file that is at fault, **instead of** the unhelpful "PC Did Not Start Correctly" message following a failed Automatic Repair
 
-`bcdedit /set {default} recoveryenabled no`
+    bcdedit /set {default} recoveryenabled no
 
 
 Enable the handy "F8 for boot options" mode
-`bcdedit /set {default} bootmenupolicy legacy`
+    
+    bcdedit /set {default} bootmenupolicy legacy
 
 Get back to normal mode (from safe mode):
-`bcdedit /deletevalue {default} safeboot`
+
+    bcdedit /deletevalue {default} safeboot
 
 DISM Examples:
 
