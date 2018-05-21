@@ -18,6 +18,25 @@ BIOS System:
 
 Note: If `bootrec /rebuildbcd` says that no operating systems are found, it means no new, unlisted OS is present, i.e. Windows is already in the BCD, and the command was successful.
 
+## User Account is Corrupt
+
+This can manifest as issues with Microsoft Store Apps, Edge, the Start Menu or Taskbar, etc.
+
+The following example CMD code will create a new administrative user.
+    
+    net user /add admin
+    net localgroup Administrators /add admin
+    
+You may then use explorer or the file manager of your choice to copy the original user accounts Documents, Desktop, etc. folders to the new account.
+
+**Do not merge the entire AppData folder to the new user:** AppData is not designed to be moved between computers or accounts whole hog, but there may be something valuable in AppData all the same. For example:
+
+* Google Chrome, Mozilla Firefox, and Microsoft Edge all store favorites and preferences in `AppData\Local`
+* Certain Microsoft mail applications store email in `AppData\Local`
+* iTunes stores iPhone/iPad backups in `AppData\Roaming`
+
+Instead of merging EVERYTHING, a better approach would be to copy the previous account AppData folder to `C:\` or `C:\Users\admin\` as `AppData.old` before erasing the old account.
+* This led to disappointment on May 20, 2018, when we were not able to retrieve the customer's Edge favorites because another technician did not make a copy of the original AppData folder.
 
 # Examples
 BCDEDIT Examples:
